@@ -1,54 +1,78 @@
-WordPress Brute Force Script
-Overview
-This repository contains a PowerShell script (brutal.ps1) designed for educational purposes to demonstrate brute force techniques against a WordPress login page. The script includes basic stealth headers, logging, and error handling to simulate a controlled brute force attempt.
-WARNING: This script is for EDUCATIONAL USE ONLY. Unauthorized use of this script to attack systems without explicit permission is ILLEGAL and UNETHICAL. Always obtain proper authorization before testing any system.
-Features
+🚨 New Project Release: WordPress Brute Force Script 🚨
 
-Attempts login to a WordPress site using a provided username and password list.
-Includes basic stealth headers to mimic a browser request.
-Logs all attempts and results to a timestamped file.
-Handles errors and rate limiting (HTTP 429).
-Configurable delay between attempts to avoid server overload.
+I'm excited to share my latest project on GitHub: The WordPress Brute Force Script! This educational tool demonstrates brute-force techniques on WordPress login pages and includes essential features like stealth headers, error handling, and logging to simulate a controlled brute force attempt.
 
-Prerequisites
+⚠️ Important Disclaimer:
+This script is for educational purposes only! Unauthorized use of this script to attack systems without explicit permission is ILLEGAL and UNETHICAL. Always obtain proper authorization before testing any system.
 
+🔑 Key Features:
+Login Attempts: Uses a provided username and password list to attempt logging into a WordPress site.
+
+Stealth Headers: Mimics a real browser request to avoid detection.
+
+Logging: Logs all attempts and results to a timestamped file.
+
+Error Handling: Handles rate limiting (HTTP 429) to avoid being blocked.
+
+Configurable Delay: Adjustable delay between attempts to prevent server overload.
+
+⚙️ Prerequisites:
 PowerShell 3.0 or higher.
+
 A password list file (e.g., 10k-most-common.txt from SecLists).
+
 Internet connection for HTTP requests.
 
-Setup
+📥 Setup Instructions:
+Clone the repository:
 
-Clone this repository:git clone https://github.com/hlonip/wordpress-bruteforcer.git
+bash
+Copy
+Edit
+git clone https://github.com/hlonip/wordpress-bruteforcer.git
 cd wordpress-bruteforcer
+Place your password list (e.g., 10k-most-common.txt) in the same directory as the script.
 
+Update the script's configuration in brutal.ps1:
 
-Place your password list file (e.g., 10k-most-common.txt) in the same directory as the script.
-Update the script's configuration section in brutal.ps1 with your target URL and username:$targetUrl = "https://example.com/wp-login.php"
+powershell
+Copy
+Edit
+$targetUrl = "https://example.com/wp-login.php"
 $username = "admin"
 $passwordListPath = ".\10k-most-common.txt"
+Note: For ethical testing, use a local WordPress instance (e.g., Docker or XAMPP) and set up its URL. Make sure you have permission to test the target system.
 
-Note: For ethical testing, set up a local WordPress instance (e.g., using Docker or XAMPP) and use its URL. Ensure you have permission to test the target system.
-
-Usage
+🖥️ How to Use:
 Run the script in PowerShell:
-.\brutal.ps1
 
+powershell
+Copy
+Edit
+.\brutal.ps1
 The script will:
 
 Load the password list.
-Attempt to log in with each password.
+
+Attempt login with each password.
+
 Log results to a file (e.g., wp_brute_log_20250425_123456.txt).
-Stop if credentials are found or after all passwords are tried.
 
-Ethical Considerations
+Stop if credentials are found or after all passwords are attempted.
 
+🔒 Ethical Considerations:
 Only test systems you own or have explicit permission to test.
-Unauthorized brute forcing violates laws like the Computer Fraud and Abuse Act (CFAA) in the USA.
+
+Unauthorized brute-forcing violates laws like the Computer Fraud and Abuse Act (CFAA) in the USA.
+
 Use this script to learn about security testing in a controlled, ethical environment (e.g., a local WordPress instance).
 
-Disclaimer
-The author and contributors are not responsible for any misuse of this script. By using this script, you agree to use it ethically and legally, and you assume all risks associated with its use.
-License
-This project is licensed under the MIT License. See the LICENSE.txt file for details.
-Contributing
-Contributions are welcome! Please submit a pull request or open an issue for suggestions or bug reports.
+📄 License:
+This project is licensed under the MIT License. See the LICENSE.txt file for full details.
+
+🤝 Contributing:
+Contributions are welcome! If you have suggestions or find any issues, feel free to submit a pull request or open an issue.
+
+🔗 Check it out on GitHub: wordpress-bruteforcer
+
+⚡ Follow me for more updates on cybersecurity, ethical hacking tutorials, and exciting projects in the security space! Let’s learn together and contribute to a more secure digital world. 💻🔐
